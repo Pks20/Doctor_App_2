@@ -3,12 +3,33 @@
     * Springboot and java
 * Data flow
   1. Controller
+     * AdminController
+     * DoctorController
+     * PatientController
   2. Services
+     * AppointmentService
+     * DoctorService
+     * EmailService
+     * PTokenService
+     * PasswordEncryptor
+     * PatientService
   3. Repository
-  4. DataBase Design
-  5. Model
- 
+     * IAppointmentRepo
+     * IDoctorRepo
+     * IPTokenRepo
+     * IPatientRepo
+  4. Model
+     * Admin
+     * Appointment
+     * BloodGroup
+     * Doctor
+     * Patient
+     * PatientAuthenticationToken
+  5. Database Used
+     * MySQL database
 
 * # Project Summary
-   In this project we created DoctorApp project and used mysql database to store the data. We create different type of mapping. It follows MVC-architecture.
-  I have created a package of DoctorAppointmentBookingApp  ApiApplication within this package I have created Four more packages. This project has three Model User which has three types of user,"Admin , Normal_User , which performing many-to-one relation between them.
+   In this project we created Doctor-Appointment basic design project and used mysql database to store the data. We create different type of mapping.
+  It follows MVC-architecture.In this application, I have also provided some of the validators on the field values and if a user puts invalid details in response,
+  it will handle exception and will revert with Http Status code 400 as a BAD_REQUEST. In my model package I have Doctor,Patient and Appointment class which has all its related data.
+  Patient can signUp and signIn in application.Patient can book appointment or Cancel Appointment.
